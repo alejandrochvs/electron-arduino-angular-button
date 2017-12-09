@@ -1,25 +1,92 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   overflow: hidden;
 }
-.container{
+
+.container {
   display: inline-flex;
-  flex-direction: column-reverse;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
 }
-.bar{
-  width: 100%;
-  background: transparent;
+
+.keypad {
+  width: 50%;
+  height: 90%;
+  background: black;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.bar.low{
-  background: lightcoral;
+
+.keypad-inner-border {
+  width: 95%;
+  height: 95%;
+  border-radius: 20px;
+  border: solid 2px white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
-.bar.med{
-  background: lightsalmon;
+.screen {
+  width: 85%;
+  height: 16%;
+  background: midnightblue;
+  border-radius: 5px;
+  color: aliceblue;
+  display: inline-flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+  padding-left: 2%;
+  align-items: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-family: 'Orbitron';
+  font-weight: 900;
+  font-size: 300%;
 }
-.bar.high{
-  background: lightgreen;
+.keys-container {
+  height: 70%;
+  width: 92.5%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.key-row {
+  width: 95%;
+  height: 20%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+.key{
+  height: 95%;
+  width: 20%;
+  border: solid 2px white;
+  background: dodgerblue;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 350%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.key.red{
+  background: red;
+}
+.key:hover {
+  transform: scale(0.95);
 }
