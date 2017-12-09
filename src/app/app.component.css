@@ -1,0 +1,18 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.light {
+  height: 50vw;
+  width: 50vw;
+  background: lightcoral;
+  transition: all .3s ease;
+  border-radius: 50%;
+}
+.light.on{
+  background: lightgreen;
+  height: 45vw;
+  width: 45vw;
+}
