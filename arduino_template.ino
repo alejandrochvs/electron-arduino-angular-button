@@ -1,36 +1,26 @@
 /*
-  DigitalReadSerial
+  AnalogReadSerial
 
-  Reads a digital input on pin 2, prints the result to the Serial Monitor
+  Reads an analog input on pin 0, prints the result to the Serial Monitor.
+  Graphical representation is available using Serial Plotter (Tools > Serial Plotter menu).
+  Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
 
   This example code is in the public domain.
 
-  http://www.arduino.cc/en/Tutorial/DigitalReadSerial
+  http://www.arduino.cc/en/Tutorial/AnalogReadSerial
 */
-
-// digital pin 2 has a pushbutton attached to it. Give it a name:
-int pushButton = 2;
 
 // the setup routine runs once when you press reset:
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
-  // make the pushbutton's pin an input:
-  pinMode(pushButton, INPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input pin:
-  int buttonState = digitalRead(pushButton);
-  if (buttonState) {
-    digitalWrite(LED_BUILTIN, HIGH);
-  } else{
-    digitalWrite(LED_BUILTIN, LOW);
-  }
-
-  // print out the state of the button:
-  Serial.println(buttonState);
-  delay(1);        // delay in between reads for stability
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A0);
+  // print out the value you read:
+  Serial.println(sensorValue);
+  delay(20);        // delay in between reads for stability
 }

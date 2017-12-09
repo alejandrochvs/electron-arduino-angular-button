@@ -1,18 +1,25 @@
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
   height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
 }
-.light {
-  height: 50vw;
-  width: 50vw;
+.container{
+  display: inline-flex;
+  flex-direction: column-reverse;
+  height: 100vh;
+  width: 100%;
+}
+.bar{
+  width: 100%;
+  background: transparent;
+}
+.bar.low{
   background: lightcoral;
-  transition: all .3s ease;
-  border-radius: 50%;
 }
-.light.on{
+.bar.med{
+  background: lightsalmon;
+}
+.bar.high{
   background: lightgreen;
-  height: 45vw;
-  width: 45vw;
 }
